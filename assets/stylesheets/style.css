@@ -1,5 +1,58 @@
 @charset "utf-8";
 
-.test {
-    color:brown;
+.l-header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+}
+.p-hamburgermenu {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  &__line {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s;
+  }
+}
+
+.p-hamburgermenu__line:nth-of-type(1) {
+  top: 0;
+}
+.p-hamburgermenu__line:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.p-hamburgermenu__text {
+  bottom: 0;
+  font-size: 10px;
+}
+
+.c-dogicon {
+  height: 100px;
+  width: auto;
+}
+.c-mail {
+  height: 50px;
+  width: auto;
+}
+.c-hero {
+  height: auto;
+  width: 100%;
+}
+.l-footer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  background-color: grey;
+}
+.c-sitename {
+  font-size: 10px;
+  color: white;
+  margin: auto;
 }
