@@ -33,8 +33,14 @@
   font-size: 10px;
 }
 
-.c-dogicon {
-  height: 100px;
+.p-topicon {
+  margin: auto;
+  font-size: 8px;
+  color: black;
+  text-align: center;
+}
+.c-dogimg {
+  height: 70px;
   width: auto;
 }
 .c-mail {
@@ -52,7 +58,15 @@
   background-color: grey;
 }
 .c-sitename {
-  font-size: 10px;
+  font-size: 14px;
   color: white;
   margin: auto;
+}
+.c-arrowTop {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(45deg);
 }
