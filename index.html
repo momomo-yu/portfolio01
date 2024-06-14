@@ -5,6 +5,7 @@
     <meta name="description" content="トップのdescription" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/stylesheets/reset.css" />
     <link rel="stylesheet" href="./assets/stylesheets/style.css" />
     <title>portfolio01</title>
   </head>
@@ -13,20 +14,27 @@
       <div class="p-hamburgermenu">
         <div class="p-hamburgermenu__line"></div>
         <div class="p-hamburgermenu__line"></div>
-        <p class="p-hamburgermenu__text">メニュー</p>
+        <div class="p-hamburgermenu__text">メニュー</div>
       </div>
       <div class="p-topicon">
-        <img class="c-dogimg" src="./assets/images/icon1.png" />
+        <img class="p-topicon__img" src="./assets/images/icon1.png" />
         <p class="p-topicon__text">チワワブラック</p>
       </div>
-      <img class="c-mail" src="./assets/images/mail.png" />
+      <button class="p-mail">
+        <img class="p-mail__icon" src="./assets/images/mail.png" />
+        <p class="p-mail__text">ご連絡</p>
+      </button>
     </header>
     <main class="l-main">
       <img class="c-hero" src="./assets/images/home1.jpg" />
+      <div class="p-title">
+        <h2 class="p-title__sub">犬と一緒の生活</h2>
+        <h1 class="p-title__main">WONDERFUL</h1>
+      </div>
     </main>
     <footer class="l-footer">
       <p class="c-sitename">&copy;チワワブラック</p>
-      <div class="c-arrowTop"></div>
+      <span class="c-arrowTop"></span>
     </footer>
   </body>
 </html>
