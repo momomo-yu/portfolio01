@@ -69,6 +69,51 @@
   background-color: #fbfbfb;
   text-align: center;
 }
+.p-mainImg {
+  display: flex;
+}
+.p-mainImg__left {
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+}
+.p-mainImg__right {
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+}
+
+.p-sns__dog--img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.p-page__dog--img {
+  height: auto;
+  width: 100%;
+}
+
+.p-topic__img {
+  height: 200px;
+  width: 70%;
+  object-fit: cover;
+}
+
+.p-last__img {
+  display: flex;
+}
+.p-last__img--left {
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+}
+.p-last__img--right {
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+}
+
 .l-footer {
   height: 80px;
   width: 100%;
