@@ -26,7 +26,13 @@
       </button>
     </header>
     <main class="l-main">
-      <img class="c-hero" src="./assets/images/home1.jpg" />
+      <div class="p-hero">
+        <img class="p-hero__img" src="./assets/images/home1.jpg" />
+        <img class="p-hero__img" src="./assets/images/home2.jpg" />
+        <img class="p-hero__img" src="./assets/images/home3.jpg" />
+        <img class="p-hero__img" src="./assets/images/home4.jpg" />
+        <img class="p-hero__img" src="./assets/images/home5.jpg" />
+      </div>
       <div class="p-title">
         <h2 class="p-title__sub">犬と一緒の生活</h2>
         <h1 class="p-title__main">WONDERFUL</h1>
@@ -35,7 +41,7 @@
         <p class="p-mainImg__text">大きな、 おめめ。</p>
         <img class="p-mainImg__left" src="./assets/images/main1.jpg" />
         <img class="p-mainImg__right" src="./assets/images/main2.jpg" />
-        <p class="p-mainImg__word">スヤッ</p>
+        <p class="p-mainImg__word">すやっ</p>
       </div>
 
       <div class="p-sns">
@@ -109,5 +115,33 @@
       <p class="c-sitename">&copy;チワワブラック</p>
       <span class="c-arrowTop"></span>
     </footer>
+    <div class="p-start">
+      <div class="p-start__box">
+        <img class="p-start__box--img" src="./assets/images/start1.png" />
+        <p class="p-start__box--text">ようこそ</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        setTimeout(function () {
+          $(".p-start__box").fadeIn(1600);
+        }, 500);
+        setTimeout(function () {
+          $(".p-start").fadeOut(500);
+        }, 2500);
+
+        $(".p-hero__img:nth-child(n+2)").hide();
+        setInterval(function () {
+          $(".p-hero__img:first-child").fadeOut(2000);
+          $(".p-hero__img:nth-child(2)").fadeIn(2000);
+          $(".p-hero__img:first-child").appendTo(".p-hero");
+        }, 6000);
+      });
+    </script>
   </body>
 </html>
