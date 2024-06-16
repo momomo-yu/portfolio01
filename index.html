@@ -141,6 +141,11 @@
           $(".p-hero__img:nth-child(2)").fadeIn(2000);
           $(".p-hero__img:first-child").appendTo(".p-hero");
         }, 6000);
+
+        $(".c-arrowTop").on("click", () => {
+          $("body,html").animate({ scrollTop: 0 }, 500);
+          return false;
+        });
       });
     </script>
   </body>
