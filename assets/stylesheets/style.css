@@ -60,46 +60,215 @@
 .p-mail__text {
   font-size: 9px;
 }
+.l-main {
+  background-color: #fbfbfb;
+}
 .c-hero {
   height: auto;
   width: 100%;
 }
 .p-title {
-  height: 300px;
+  padding: 70px 0;
   background-color: #fbfbfb;
   text-align: center;
+  font-family: serif;
+  line-height: 30px;
+}
+.p-title__sub {
+  font-size: 20px;
+}
+.p-title__main {
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: 500;
 }
 .p-mainImg {
   display: flex;
+  position: relative;
+}
+.p-mainImg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  font-size: 22px;
+  color: #525252;
+  font-family: serif;
 }
 .p-mainImg__left {
-  height: 300px;
+  height: 450px;
   width: 50%;
   object-fit: cover;
 }
 .p-mainImg__right {
-  height: 300px;
+  height: 450px;
   width: 50%;
   object-fit: cover;
 }
-
+.p-mainImg__word {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  font-size: 18px;
+  color: white;
+  font-family: serif;
+  transform: rotate(-10deg);
+}
+.p-sns__x {
+  padding: 70px 0;
+  background-color: #fbfbfb;
+  text-align: center;
+  line-height: 30px;
+}
+.p-sns__x--text {
+  font-size: 25px;
+  font-family: serif;
+}
+.p-sns__x--btn {
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid black;
+  color: white;
+  font-family: arial;
+  background-color: black;
+  border-radius: 20px;
+}
+.c-x {
+  height: 15px;
+  width: auto;
+}
+.p-sns__other {
+  background-color: #f4f4f4;
+  padding: 70px 0 30px 0;
+}
+.p-sns__other--text {
+  font-size: 25px;
+  font-family: serif;
+}
+.p-sns__other--btn {
+  font-size: 20px;
+  width: 200px;
+  color: #525252;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 20px;
+}
+.c-sns {
+  height: 30px;
+  width: auto;
+}
+.p-sns__dog {
+  background-color: #f4f4f4;
+  padding: 20px 0 70px 0;
+  position: relative;
+}
 .p-sns__dog--img {
   height: 250px;
   width: 300px;
   object-fit: cover;
 }
-
+.p-sns__dog--textMain {
+  position: absolute;
+  font-size: 15px;
+  font-family: serif;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  top: 0;
+  left: 63%;
+  background-color: white;
+}
+.p-sns__dog--textSub {
+  position: absolute;
+  font-size: 15px;
+  font-family: serif;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  top: 150px;
+  left: 60%;
+  background-color: white;
+}
+.p-sns__dog--textUnder {
+  font-size: 12px;
+  font-family: serif;
+  text-align: center;
+}
+.p-page__column {
+  margin: 70px auto;
+  padding: 20px;
+  gap: 25px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.p-page__column--text {
+  font-size: 20px;
+  font-family: serif;
+}
+.p-page__column--page {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #525252;
+  border-right: 1px solid #525252;
+  transform: rotate(45deg);
+}
+.p-page__dog {
+  position: relative;
+}
+.p-page__dog--text {
+  position: absolute;
+  font-size: 22px;
+  color: #525252;
+  font-family: serif;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .p-page__dog--img {
+  padding-top: 50px;
   height: auto;
   width: 100%;
 }
-
+.p-page__dog--word {
+  position: absolute;
+  font-size: 18px;
+  color: #525252;
+  font-family: serif;
+  top: 55%;
+  left: 45%;
+}
+.p-page__site--topic {
+  position: relative;
+}
 .p-topic__img {
-  height: 200px;
-  width: 70%;
+  height: 180px;
+  width: 80%;
   object-fit: cover;
 }
+.p-topic__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-family: serif;
+  color: white;
+  font-weight: 500;
+}
 
+.p-last__text {
+  padding: 70px 0;
+  font-size: 25px;
+  background-color: #fbfbfb;
+  text-align: center;
+  font-family: serif;
+  font-weight: 500;
+}
 .p-last__img {
   display: flex;
 }
@@ -115,15 +284,22 @@
 }
 
 .l-footer {
-  height: 80px;
+  height: 60px;
   width: 100%;
   display: flex;
+  align-items: center;
   background-color: #525252;
+  position: relative;
 }
 .c-sitename {
-  font-size: 14px;
+  font-size: 10px;
   color: white;
+  font-family: serif;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .c-arrowTop {
   display: inline-block;
@@ -132,4 +308,7 @@
   border-top: 1px solid white;
   border-left: 1px solid white;
   transform: rotate(45deg);
+  position: absolute;
+  top: 42%;
+  right: 10%;
 }
