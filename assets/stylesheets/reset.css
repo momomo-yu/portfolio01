@@ -75,7 +75,6 @@ time,
 mark,
 audio,
 button,
-p,
 video {
   margin: 0;
   padding: 0;
@@ -127,6 +126,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 /* change colours to suit your needs */

@@ -8,7 +8,8 @@
   background-color: #f4f4f4;
 }
 .p-hamburgermenu {
-  height: 50px;
+  display: block;
+  height: 40px;
   width: 50px;
   position: relative;
   margin-left: 70px;
@@ -16,34 +17,36 @@
 }
 .p-hamburgermenu__line {
   height: 1px;
-  width: 100%;
-  background-color: #000;
+  width: 50%;
+  background-color: #333;
   display: inline-block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  transition: all 0.3s;
+  transition: all 0.4s ease-in-out;
 }
-.p-hamburgermenu__text {
-  font-size: 7px;
-}
-
 .p-hamburgermenu__line:nth-of-type(1) {
-  top: 0;
+  top: 20%;
 }
 .p-hamburgermenu__line:nth-of-type(2) {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 40%;
+  transform: translateY(-50%, -50%);
 }
+
 .p-hamburgermenu__text {
+  position: absolute;
   bottom: 0;
+  left: 10%;
   font-size: 10px;
+  font-family: serif;
+  color: #333;
 }
 
 .p-topicon {
   margin: auto;
-  font-size: 10px;
-  color: black;
+  font-size: 12px;
+  font-family: serif;
+  color: #000000;
   text-align: center;
 }
 .p-topicon__img {
@@ -51,6 +54,8 @@
   width: auto;
 }
 .p-mail {
+  width: 35px;
+  line-height: 12px;
   margin-right: 70px;
 }
 .p-mail__icon {
@@ -58,7 +63,9 @@
   width: auto;
 }
 .p-mail__text {
-  font-size: 9px;
+  font-size: 10px;
+  font-family: serif;
+  color: #333;
 }
 .l-main {
   background-color: #fbfbfb;
@@ -70,6 +77,7 @@
 }
 .p-hero__img {
   position: absolute;
+  height: 550px;
   width: 100%;
   object-fit: cover;
 }
@@ -98,7 +106,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   writing-mode: vertical-rl;
-  white-space: nowrap;
+  #ffffff-space: nowrap;
   font-size: 22px;
   color: #525252;
   font-family: serif;
@@ -118,7 +126,7 @@
   top: 15%;
   right: 10%;
   font-size: 18px;
-  color: white;
+  color: #ffffff;
   font-family: serif;
   transform: rotate(-10deg);
 }
@@ -129,21 +137,27 @@
   line-height: 30px;
 }
 .p-sns__x--text {
-  font-size: 25px;
+  font-size: 22px;
   font-family: serif;
 }
 .p-sns__x--btn {
-  font-size: 14px;
-  padding: 0 10px;
-  border: 1px solid black;
-  color: white;
-  font-family: arial;
-  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  margin: 10px auto 0;
+  border: 1px solid #000000;
+  background-color: #000000;
   border-radius: 20px;
 }
 .c-x {
   height: 15px;
   width: auto;
+}
+.c-xName {
+  font-size: 14px;
+  font-family: arial;
+  color: #ffffff;
 }
 .p-sns__other {
   background-color: #f4f4f4;
@@ -151,20 +165,29 @@
   text-align: center;
 }
 .p-sns__other--text {
-  font-size: 25px;
+  font-size: 22px;
   font-family: serif;
+  margin-bottom: 30px;
 }
-.p-sns__other--btn {
-  font-size: 20px;
-  width: 200px;
-  color: #525252;
-  border: 1px solid white;
-  background-color: white;
-  border-radius: 20px;
+.p-sns__otherBox--btn {
+  height: 50px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin: 0 auto 15px;
 }
 .c-sns {
-  height: 30px;
-  width: auto;
+  height: auto;
+  width: 30px;
+}
+.c-snsName {
+  font-size: 20px;
+  font-family: serif;
+  color: #525252;
 }
 .p-sns__dog {
   background-color: #f4f4f4;
@@ -179,23 +202,29 @@
 }
 .p-sns__dog--textMain {
   position: absolute;
-  font-size: 15px;
+  font-size: 12px;
   font-family: serif;
+  color: #333;
   writing-mode: vertical-rl;
-  white-space: nowrap;
+  #ffffff-space: nowrap;
   top: 0;
-  left: 63%;
-  background-color: white;
+  left: 66%;
+  background-color: #ffffff;
+  padding: 7px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 .p-sns__dog--textSub {
   position: absolute;
-  font-size: 15px;
+  font-size: 12px;
   font-family: serif;
+  color: #333;
   writing-mode: vertical-rl;
-  white-space: nowrap;
+  #ffffff-space: nowrap;
   top: 150px;
-  left: 60%;
-  background-color: white;
+  left: 63%;
+  background-color: #ffffff;
+  padding: 7px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 .p-sns__dog--textUnder {
   font-size: 12px;
@@ -203,11 +232,11 @@
   text-align: center;
 }
 .p-page__column {
-  margin: 70px auto;
+  margin: 70px auto 0;
   padding: 20px;
   gap: 25px;
-  border: 1px solid black;
-  background-color: white;
+  border: 1px solid #000000;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
 }
@@ -225,6 +254,7 @@
 }
 .p-page__dog {
   position: relative;
+  margin: 100px 0;
 }
 .p-page__dog--text {
   position: absolute;
@@ -232,10 +262,8 @@
   color: #525252;
   font-family: serif;
   writing-mode: vertical-rl;
-  white-space: nowrap;
-  top: 14%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 6%);
 }
 .p-page__dog--img {
   padding-top: 50px;
@@ -262,8 +290,8 @@
   transition: ease-in-out 0.3s;
 }
 .p-topic__img {
-  height: 180px;
-  width: 80%;
+  height: 160px;
+  width: 85%;
   object-fit: cover;
 }
 .p-topic__text {
@@ -273,12 +301,12 @@
   transform: translate(-50%, -50%);
   font-size: 25px;
   font-family: serif;
-  color: white;
+  color: #ffffff;
   font-weight: 500;
 }
 
 .p-last__text {
-  padding: 70px 0;
+  margin: 150px 0 70px 0;
   font-size: 25px;
   background-color: #fbfbfb;
   text-align: center;
@@ -309,7 +337,7 @@
 }
 .c-sitename {
   font-size: 10px;
-  color: white;
+  color: #ffffff;
   font-family: serif;
   margin: auto;
   position: absolute;
@@ -321,8 +349,8 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  border-top: 1px solid white;
-  border-left: 1px solid white;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
   transform: rotate(45deg);
   position: absolute;
   top: 42%;
@@ -330,7 +358,7 @@
 }
 
 .p-start {
-  background-color: white;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -342,9 +370,9 @@
   text-align: center;
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
-  display: none;
+  opacity: 0;
   z-index: 9999;
 }
 .p-start__box--img {
@@ -354,7 +382,24 @@
 }
 .p-start__box--text {
   font-size: 20px;
-  color: black;
+  color: #000000;
   font-family: serif;
   font-weight: 500;
+}
+.p-nav {
+  display: none;
+  top: 100px;
+  background-color: #fbfbfb;
+}
+.p-nav__title--text {
+  font-size: 22px;
+  font-family: serif;
+  color: #333;
+}
+.p-nav__sns {
+  display: flex;
+}
+.p-nav__sns--img {
+  height: auto;
+  width: 30px;
 }

@@ -11,18 +11,20 @@
   </head>
   <body>
     <header class="l-header">
-      <div class="p-hamburgermenu">
-        <div class="p-hamburgermenu__line"></div>
-        <div class="p-hamburgermenu__line"></div>
-        <div class="p-hamburgermenu__text">メニュー</div>
-      </div>
+      <button class="p-hamburgermenu">
+        <span class="p-hamburgermenu__line"></span>
+        <span class="p-hamburgermenu__line"></span>
+        <span class="p-hamburgermenu__text">メニュー</span>
+      </button>
       <div class="p-topicon">
         <img class="p-topicon__img" src="./assets/images/icon1.png" />
         <p class="p-topicon__text">チワワブラック</p>
       </div>
       <button class="p-mail">
-        <img class="p-mail__icon" src="./assets/images/mail.png" />
-        <p class="p-mail__text">ご連絡</p>
+        <a href="#">
+          <img class="p-mail__icon" src="./assets/images/mail.png" />
+          <p class="p-mail__text">ご連絡</p>
+        </a>
       </button>
     </header>
     <main class="l-main">
@@ -47,25 +49,35 @@
       <div class="p-sns">
         <div class="p-sns__x">
           <p class="p-sns__x--text">＼ 最新情報はXにてcheck ／</p>
-          <button class="p-sns__x--btn">
-            <img class="c-x" src="./assets/images/sns1.png" />
-            @chiwawa_blackさんをフォロー
-          </button>
+          <a href="#">
+            <button class="p-sns__x--btn">
+              <img class="c-x" src="./assets/images/sns1.png" />
+              <p class="c-xName">@chiwawa_blackさんをフォロー</p>
+            </button>
+          </a>
         </div>
         <div class="p-sns__other">
           <p class="p-sns__other--text">その他のSNSはこちら</p>
-          <button class="p-sns__other--btn">
-            <img class="c-sns" src="./assets/images/sns2.png" />
-            YouTube
-          </button>
-          <button class="p-sns__other--btn">
-            <img class="c-sns" src="./assets/images/sns3.png" />
-            Instagram
-          </button>
-          <button class="p-sns__other--btn">
-            <img class="c-sns" src="./assets/images/sns4.png" />
-            TikTok
-          </button>
+          <div class="p-sns__otherBox">
+            <a href="#">
+              <button class="p-sns__otherBox--btn">
+                <img class="c-sns" src="./assets/images/sns2.png" />
+                <p class="c-snsName">YouTube</p>
+              </button>
+            </a>
+            <a href="#">
+              <button class="p-sns__otherBox--btn">
+                <img class="c-sns" src="./assets/images/sns3.png" />
+                <p class="c-snsName">Instagram</p>
+              </button>
+            </a>
+            <a href="#">
+              <button class="p-sns__otherBox--btn">
+                <img class="c-sns" src="./assets/images/sns4.png" />
+                <p class="c-snsName">TikTok</p>
+              </button>
+            </a>
+          </div>
         </div>
         <div class="p-sns__dog">
           <img class="p-sns__dog--img" src="./assets/images/img1.jpg" />
@@ -74,32 +86,42 @@
           <p class="p-sns__dog--textUnder">↑おねがい</p>
         </div>
         <div class="p-page">
-          <button class="p-page__column">
-            <p class="p-page__column--text">コラムはこちら</p>
-            <span class="p-page__column--page"></span>
-          </button>
+          <a href="#">
+            <button class="p-page__column">
+              <p class="p-page__column--text">コラムはこちら</p>
+              <span class="p-page__column--page"></span>
+            </button>
+          </a>
           <div class="p-page__dog">
             <p class="p-page__dog--text">花を愛でるチワワ</p>
             <img class="p-page__dog--img" src="./assets/images/img2.jpg" />
             <p class="p-page__dog--word">ジッ</p>
           </div>
           <ul class="p-page__site">
-            <li class="p-page__site--topic">
-              <img class="p-topic__img" src="./assets/images/img3.jpg" />
-              <p class="p-topic__text">チワワとは</p>
-            </li>
-            <li class="p-page__site--topic">
-              <img class="p-topic__img" src="./assets/images/img4.jpg" />
-              <p class="p-topic__text">コラボなど</p>
-            </li>
-            <li class="p-page__site--topic">
-              <img class="p-topic__img" src="./assets/images/img5.jpg" />
-              <p class="p-topic__text">グッズ</p>
-            </li>
-            <li class="p-page__site--topic">
-              <img class="p-topic__img" src="./assets/images/img6.jpg" />
-              <p class="p-topic__text">ギャラリー</p>
-            </li>
+            <a href="#">
+              <li class="p-page__site--topic">
+                <img class="p-topic__img" src="./assets/images/img3.jpg" />
+                <p class="p-topic__text">チワワとは</p>
+              </li>
+            </a>
+            <a href="#">
+              <li class="p-page__site--topic">
+                <img class="p-topic__img" src="./assets/images/img4.jpg" />
+                <p class="p-topic__text">コラボなど</p>
+              </li>
+            </a>
+            <a href="#">
+              <li class="p-page__site--topic">
+                <img class="p-topic__img" src="./assets/images/img5.jpg" />
+                <p class="p-topic__text">グッズ</p>
+              </li>
+            </a>
+            <a href="#">
+              <li class="p-page__site--topic">
+                <img class="p-topic__img" src="./assets/images/img6.jpg" />
+                <p class="p-topic__text">ギャラリー</p>
+              </li>
+            </a>
           </ul>
         </div>
         <div class="p-last">
@@ -113,12 +135,26 @@
     </main>
     <footer class="l-footer">
       <p class="c-sitename">&copy;チワワブラック</p>
-      <span class="c-arrowTop"></span>
+      <button class="c-arrowTop"></button>
     </footer>
     <div class="p-start">
       <div class="p-start__box">
         <img class="p-start__box--img" src="./assets/images/start1.png" />
         <p class="p-start__box--text">ようこそ</p>
+      </div>
+    </div>
+    <div class="p-nav">
+      <div class="p-nav__title">
+        <h1 class="p-nav__title--text">チワワとは</h1>
+        <h1 class="p-nav__title--text">コラボなど</h1>
+        <h1 class="p-nav__title--text">グッズ</h1>
+        <h1 class="p-nav__title--text">ギャラリー</h1>
+      </div>
+      <div class="p-nav__sns">
+        <img class="p-nav__sns--img" src="./assets/images/nav1.png" />
+        <img class="p-nav__sns--img" src="./assets/images/nav2.png" />
+        <img class="p-nav__sns--img" src="./assets/images/nav3.png" />
+        <img class="p-nav__sns--img" src="./assets/images/nav4.png" />
       </div>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -129,7 +165,11 @@
     <script type="text/javascript">
       $(function () {
         setTimeout(function () {
-          $(".p-start__box").fadeIn(1600);
+          $(".p-start__box").css({
+            transform: "translate(-50%, -100%)",
+            opacity: 1,
+            transition: "transform 1.0s, opacity 1.0s",
+          });
         }, 500);
         setTimeout(function () {
           $(".p-start").fadeOut(500);
@@ -145,6 +185,21 @@
         $(".c-arrowTop").on("click", () => {
           $("body,html").animate({ scrollTop: 0 }, 500);
           return false;
+        });
+
+        $(".p-hamburgermenu").on(
+          "click",
+          function () {
+            $("#nav").addClass("p-nav");
+          },
+          function () {
+            $("#nav").removeClass("p-nav");
+          }
+        );
+      });
+      $(document).ready(function () {
+        $(".p-hamburgermenu").click(function () {
+          $(".p-nav").fadeToggle();
         });
       });
     </script>
