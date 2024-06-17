@@ -106,7 +106,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   writing-mode: vertical-rl;
-  #ffffff-space: nowrap;
+  flex-wrap: nowrap;
   font-size: 22px;
   color: #525252;
   font-family: serif;
@@ -206,7 +206,7 @@
   font-family: serif;
   color: #333;
   writing-mode: vertical-rl;
-  #ffffff-space: nowrap;
+  flex-wrap: nowrap;
   top: 0;
   left: 66%;
   background-color: #ffffff;
@@ -219,7 +219,7 @@
   font-family: serif;
   color: #333;
   writing-mode: vertical-rl;
-  #ffffff-space: nowrap;
+  flex-wrap: nowrap;
   top: 150px;
   left: 63%;
   background-color: #ffffff;
