@@ -407,7 +407,7 @@
   width: 30px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 750px) {
   /* SP style */
   .p-hero {
     height: 400px;
@@ -440,7 +440,7 @@
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 750px) {
   /* PC style */
   .p-hero {
     height: 550px;
