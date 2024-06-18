@@ -40,9 +40,11 @@
         <h1 class="p-title__main">WONDERFUL</h1>
       </div>
       <div class="p-mainImg">
+        <div class="p-mainImg__box">
+          <img class="p-mainImg__boxLeft" src="./assets/images/main1.jpg" />
+          <img class="p-mainImg__boxRight" src="./assets/images/main2.jpg" />
+        </div>
         <p class="p-mainImg__text">大きな、 おめめ。</p>
-        <img class="p-mainImg__left" src="./assets/images/main1.jpg" />
-        <img class="p-mainImg__right" src="./assets/images/main2.jpg" />
         <p class="p-mainImg__word">すやっ</p>
       </div>
 
@@ -174,6 +176,23 @@
         setTimeout(function () {
           $(".p-start").fadeOut(500);
         }, 2500);
+
+        $(document).ready(function () {
+          let start_position = 0,
+            window_position;
+          const header = $(".l-header");
+          $(window).scroll(function () {
+            window_position = $(window).scrollTop();
+            const headerHeight = header.outerHeight();
+            if (window_position <= start_position) {
+              header.css("top", "0");
+            } else {
+              header.css("top", -headerHeight + "px");
+            }
+            start_position = window_position;
+          });
+          $(window).trigger("scroll");
+        });
 
         $(".p-hero__img:nth-child(n+2)").hide();
         setInterval(function () {
