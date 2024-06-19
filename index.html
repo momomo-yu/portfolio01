@@ -194,6 +194,11 @@
           $(window).trigger("scroll");
         });
 
+        const hamburgerMenu = document.querySelector(".p-hamburgermenu");
+        hamburgerMenu.addEventListener("click", () => {
+          hamburgerMenu.classList.toggle("active");
+        });
+
         $(".p-hero__img:nth-child(n+2)").hide();
         setInterval(function () {
           $(".p-hero__img:first-child").fadeOut(2000);
