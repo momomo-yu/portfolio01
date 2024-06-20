@@ -23,7 +23,7 @@
       <button class="p-mail">
         <a href="#">
           <img class="p-mail__icon" src="./assets/images/mail.png" />
-          <p class="p-mail__text">ご連絡</p>
+          <span class="p-mail__text">ご連絡</span>
         </a>
       </button>
     </header>
@@ -103,7 +103,7 @@
             <a href="#">
               <li class="p-page__site--topic">
                 <img class="p-topic__img" src="./assets/images/img3.jpg" />
-                <p class="p-topic__text">チワワとは</p>
+                <p class="p-topic__text">チワワについて</p>
               </li>
             </a>
             <a href="#">
@@ -146,17 +146,25 @@
       </div>
     </div>
     <div class="p-nav">
-      <div class="p-nav__title">
-        <h1 class="p-nav__title--text">チワワとは</h1>
-        <h1 class="p-nav__title--text">コラボなど</h1>
-        <h1 class="p-nav__title--text">グッズ</h1>
-        <h1 class="p-nav__title--text">ギャラリー</h1>
-      </div>
+      <ul class="p-nav__title">
+        <a href="#"><li class="p-nav__title--text">チワワについて</li></a>
+        <a href="#"><li class="p-nav__title--text">コラボなど</li></a>
+        <a href="#"><li class="p-nav__title--text">グッズ</li></a>
+        <a href="#"><li class="p-nav__title--text">ギャラリー</li></a>
+      </ul>
       <div class="p-nav__sns">
-        <img class="p-nav__sns--img" src="./assets/images/nav1.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav2.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav3.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav4.png" />
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav1.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav2.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav3.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav4.png"
+        /></a>
       </div>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -202,6 +210,11 @@
           hamburgerMenu.classList.toggle("active");
         });
 
+        //目次表示//
+        $(".p-hamburgermenu").click(function () {
+          $(".p-nav").fadeToggle(500);
+        });
+
         //.p-heroの画像スライド//
         $(".p-hero__img:nth-child(n+2)").hide();
         setInterval(function () {
@@ -214,21 +227,6 @@
         $(".c-arrowTop").on("click", () => {
           $("body,html").animate({ scrollTop: 0 }, 500);
           return false;
-        });
-
-        $(".p-hamburgermenu").on(
-          "click",
-          function () {
-            $("#nav").addClass("p-nav");
-          },
-          function () {
-            $("#nav").removeClass("p-nav");
-          }
-        );
-      });
-      $(document).ready(function () {
-        $(".p-hamburgermenu").click(function () {
-          $(".p-nav").fadeToggle();
         });
       });
     </script>
