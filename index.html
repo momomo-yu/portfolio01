@@ -10,7 +10,7 @@
     <title>portfolio01</title>
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header--sp">
       <button class="p-hamburgermenu">
         <span class="p-hamburgermenu__line"></span>
         <span class="p-hamburgermenu__line"></span>
@@ -26,6 +26,26 @@
           <span class="p-mail__text">ご連絡</span>
         </a>
       </button>
+    </header>
+    <header class="l-header--pc">
+      <div class="p-topicon">
+        <img class="p-topicon__img" src="./assets/images/icon1.png" />
+        <p class="p-topicon__text">チワワブラック</p>
+      </div>
+      <ul class="p-sidemenu">
+        <a href="#"><li class="p-nav__title--text">チワワについて</li></a>
+        <a href="#"><li class="p-nav__title--text">コラボなど</li></a>
+        <a href="#"><li class="p-nav__title--text">グッズ</li></a>
+        <a href="#"><li class="p-nav__title--text">ギャラリー</li></a>
+      </ul>
+      <div class="p-nav__sns">
+        <a href="#">
+          <button class="p-contact">
+            <img class="p-contact__img" src="./assets/images/mail.png" />
+            <span class="p-contact__text">ご連絡はこちら</span>
+          </button>
+        </a>
+      </div>
     </header>
     <main class="l-main">
       <div class="p-hero">
@@ -190,7 +210,7 @@
         $(document).ready(function () {
           let start_position = 0,
             window_position;
-          const header = $(".l-header");
+          const header = $(".l-header--sp");
           $(window).scroll(function () {
             window_position = $(window).scrollTop();
             const headerHeight = header.outerHeight();
