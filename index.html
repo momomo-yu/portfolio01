@@ -10,7 +10,7 @@
     <title>portfolio01</title>
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header--sp">
       <button class="p-hamburgermenu">
         <span class="p-hamburgermenu__line"></span>
         <span class="p-hamburgermenu__line"></span>
@@ -23,9 +23,27 @@
       <button class="p-mail">
         <a href="#">
           <img class="p-mail__icon" src="./assets/images/mail.png" />
-          <p class="p-mail__text">ご連絡</p>
+          <span class="p-mail__text">ご連絡</span>
         </a>
       </button>
+    </header>
+    <header class="l-header--pc">
+      <div class="p-topicon">
+        <img class="p-topicon__img" src="./assets/images/icon1.png" />
+        <p class="p-topicon__text">チワワブラック</p>
+      </div>
+      <ul class="p-sidemenu">
+        <a href="#"><li class="p-nav__title--text">チワワについて</li></a>
+        <a href="#"><li class="p-nav__title--text">コラボなど</li></a>
+        <a href="#"><li class="p-nav__title--text">グッズ</li></a>
+        <a href="#"><li class="p-nav__title--text">ギャラリー</li></a>
+      </ul>
+      <a href="#">
+        <button class="p-contact">
+          <img class="p-contact__img" src="./assets/images/mail.png" />
+          <span class="p-contact__text">ご連絡はこちら</span>
+        </button>
+      </a>
     </header>
     <main class="l-main">
       <div class="p-hero">
@@ -40,9 +58,11 @@
         <h1 class="p-title__main">WONDERFUL</h1>
       </div>
       <div class="p-mainImg">
+        <div class="p-mainImg__box">
+          <img class="p-mainImg__boxLeft" src="./assets/images/main1.jpg" />
+          <img class="p-mainImg__boxRight" src="./assets/images/main2.jpg" />
+        </div>
         <p class="p-mainImg__text">大きな、 おめめ。</p>
-        <img class="p-mainImg__left" src="./assets/images/main1.jpg" />
-        <img class="p-mainImg__right" src="./assets/images/main2.jpg" />
         <p class="p-mainImg__word">すやっ</p>
       </div>
 
@@ -78,12 +98,12 @@
               </button>
             </a>
           </div>
-        </div>
-        <div class="p-sns__dog">
-          <img class="p-sns__dog--img" src="./assets/images/img1.jpg" />
-          <p class="p-sns__dog--textMain">フォローしてくれたら</p>
-          <p class="p-sns__dog--textSub">嬉しいです</p>
-          <p class="p-sns__dog--textUnder">↑おねがい</p>
+          <div class="p-sns__dog">
+            <img class="p-sns__dog--img" src="./assets/images/img1.jpg" />
+            <p class="p-sns__dog--textMain">フォローしてくれたら</p>
+            <p class="p-sns__dog--textSub">嬉しいです</p>
+          </div>
+          <p class="p-sns__comment">↑おねがい</p>
         </div>
         <div class="p-page">
           <a href="#">
@@ -101,7 +121,7 @@
             <a href="#">
               <li class="p-page__site--topic">
                 <img class="p-topic__img" src="./assets/images/img3.jpg" />
-                <p class="p-topic__text">チワワとは</p>
+                <p class="p-topic__text">チワワについて</p>
               </li>
             </a>
             <a href="#">
@@ -144,17 +164,25 @@
       </div>
     </div>
     <div class="p-nav">
-      <div class="p-nav__title">
-        <h1 class="p-nav__title--text">チワワとは</h1>
-        <h1 class="p-nav__title--text">コラボなど</h1>
-        <h1 class="p-nav__title--text">グッズ</h1>
-        <h1 class="p-nav__title--text">ギャラリー</h1>
-      </div>
+      <ul class="p-nav__title">
+        <a href="#"><li class="p-nav__title--text">チワワについて</li></a>
+        <a href="#"><li class="p-nav__title--text">コラボなど</li></a>
+        <a href="#"><li class="p-nav__title--text">グッズ</li></a>
+        <a href="#"><li class="p-nav__title--text">ギャラリー</li></a>
+      </ul>
       <div class="p-nav__sns">
-        <img class="p-nav__sns--img" src="./assets/images/nav1.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav2.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav3.png" />
-        <img class="p-nav__sns--img" src="./assets/images/nav4.png" />
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav1.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav2.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav3.png"
+        /></a>
+        <a href="#"
+          ><img class="p-nav__sns--img" src="./assets/images/nav4.png"
+        /></a>
       </div>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -164,6 +192,7 @@
     ></script>
     <script type="text/javascript">
       $(function () {
+        //ようこその表示//
         setTimeout(function () {
           $(".p-start__box").css({
             transform: "translate(-50%, -100%)",
@@ -175,6 +204,36 @@
           $(".p-start").fadeOut(500);
         }, 2500);
 
+        //スクロール時のヘッダーの動き//
+        $(document).ready(function () {
+          let start_position = 0,
+            window_position;
+          const header = $(".l-header--sp");
+          $(window).scroll(function () {
+            window_position = $(window).scrollTop();
+            const headerHeight = header.outerHeight();
+            if (window_position <= start_position) {
+              header.css("top", "0");
+            } else {
+              header.css("top", -headerHeight + "px");
+            }
+            start_position = window_position;
+          });
+          $(window).trigger("scroll");
+        });
+
+        //ハンバーガーメニュークリックしたら×になる//
+        const hamburgerMenu = document.querySelector(".p-hamburgermenu");
+        hamburgerMenu.addEventListener("click", () => {
+          hamburgerMenu.classList.toggle("active");
+        });
+
+        //目次表示//
+        $(".p-hamburgermenu").click(function () {
+          $(".p-nav").fadeToggle(500);
+        });
+
+        //.p-heroの画像スライド//
         $(".p-hero__img:nth-child(n+2)").hide();
         setInterval(function () {
           $(".p-hero__img:first-child").fadeOut(2000);
@@ -182,24 +241,10 @@
           $(".p-hero__img:first-child").appendTo(".p-hero");
         }, 6000);
 
+        //フッター上矢印でトップに移動//
         $(".c-arrowTop").on("click", () => {
           $("body,html").animate({ scrollTop: 0 }, 500);
           return false;
-        });
-
-        $(".p-hamburgermenu").on(
-          "click",
-          function () {
-            $("#nav").addClass("p-nav");
-          },
-          function () {
-            $("#nav").removeClass("p-nav");
-          }
-        );
-      });
-      $(document).ready(function () {
-        $(".p-hamburgermenu").click(function () {
-          $(".p-nav").fadeToggle();
         });
       });
     </script>
