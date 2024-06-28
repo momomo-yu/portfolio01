@@ -109,7 +109,7 @@
   color: #333;
   line-height: 1.5;
 }
-.p-title__main {
+.p-title__text--main {
   font-style: oblique;
   font-weight: 500;
 }
@@ -453,10 +453,10 @@
   .p-hero__img {
     height: 320px;
   }
-  .p-title__sub {
+  .p-title__text {
     font-size: 16px;
   }
-  .p-title__main {
+  .p-title__text--main {
     font-size: 23px;
   }
   .p-mainImg__boxLeft {
@@ -660,10 +660,10 @@
   .p-hero__img {
     height: 100vh;
   }
-  .p-title__sub {
+  .p-title__text {
     font-size: 24px;
   }
-  .p-title__main {
+  .p-title__text--main {
     font-size: 35px;
   }
   .p-mainImg__boxLeft {
