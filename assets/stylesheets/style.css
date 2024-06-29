@@ -380,14 +380,15 @@
   z-index: 4;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 .p-start__box {
   text-align: center;
   position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   opacity: 0;
 }
 .p-start__box--img {
@@ -398,6 +399,7 @@
   font-family: serif;
   font-weight: 500;
 }
+
 .p-nav {
   display: none;
   height: 100%;
@@ -564,9 +566,6 @@
   .c-arrowTop {
     width: 15px;
     height: 15px;
-  }
-  .p-start__box {
-    top: 63%;
   }
   .p-start__box--img {
     width: 65%;
@@ -773,9 +772,6 @@
   .c-arrowTop {
     width: 35px;
     height: 35px;
-  }
-  .p-start__box {
-    top: 70%;
   }
   .p-start__box--img {
     width: 50%;
